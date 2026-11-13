@@ -1,0 +1,71 @@
+{
+  "version": 2,
+  "skills": {
+    "android-design-guidelines": {
+      "source": "ehmo/platform-design-skills",
+      "sourceType": "github",
+      "skillPath": "skills/android/SKILL.md",
+      "computedHash": "b10041d988cacb70117240ab6493617cc77674fe13e005d9b3ffa111fa2216f4"
+    },
+    "clean-code": {
+      "source": "Jeyker-Dev/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/practices/clean-code/SKILL.md",
+      "computedHash": "6eff0520466bd361834a393a8eeb4e1fbe3dba3fa354666766b5689014a267ab"
+    },
+    "error-handling": {
+      "source": "Jeyker-Dev/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/practices/error-handling/SKILL.md",
+      "computedHash": "c7b812e9336f048985fff9390af358ee4f3be129b8030db7716eb1e855302f63"
+    },
+    "flutter-add-widget-preview": {
+      "source": "flutter/agent-plugins",
+      "sourceType": "github",
+      "skillPath": "skills/flutter-add-widget-preview/SKILL.md",
+      "computedHash": "a6866e150ae9f804349bf399bb887e8ede45f888657411deb4e8179400633c88"
+    },
+    "flutter-build-responsive-layout": {
+      "source": "flutter/agent-plugins",
+      "sourceType": "github",
+      "skillPath": "skills/flutter-build-responsive-layout/SKILL.md",
+      "computedHash": "bdb7ab7ca812ee719237a718376a5f2e15b659201ff66818f1012c5d13751487"
+    },
+    "flutter-fix-layout-issues": {
+      "source": "flutter/agent-plugins",
+      "sourceType": "github",
+      "skillPath": "skills/flutter-fix-layout-issues/SKILL.md",
+      "computedHash": "66c9d468f894704bfd760c9c6f60651e634fadb099f1977ab9d4e2bf73eb5fc1"
+    },
+    "ios-design-guidelines": {
+      "source": "ehmo/platform-design-skills",
+      "sourceType": "github",
+      "skillPath": "skills/ios/SKILL.md",
+      "computedHash": "6f8ed00c6660a4030a9c2602142524764d147249ce7da96f0a1403e460dfffb1"
+    },
+    "project-docs": {
+      "source": "Jeyker-Dev/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/practices/project-docs/SKILL.md",
+      "computedHash": "4ec1e343cfc75ba3848be0a282e2dbd1230a14044d4cf8f542cfd702e88a7fb1"
+    },
+    "python-conventions": {
+      "source": "Jeyker-Dev/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/stacks/python-conventions/SKILL.md",
+      "computedHash": "e4306c6c056dbf87080cc937d8a5c63da3db59d74ed2ef25da489d134a110f93"
+    },
+    "testing-strategy": {
+      "source": "Jeyker-Dev/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/practices/testing-strategy/SKILL.md",
+      "computedHash": "e2661d34c8dfa09df099e4437d9bff81005d6ce0bbc024a51d34e6475d50c603"
+    },
+    "ui-design": {
+      "source": "Jeyker-Dev/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/practices/ui-design/SKILL.md",
+      "computedHash": "42a002099254bc95ae4ad45db963d251ba0d344cda31ec948c775fc119137cc5"
+    }
+  }
+}
