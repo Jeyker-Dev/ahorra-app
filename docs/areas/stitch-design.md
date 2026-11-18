@@ -15,7 +15,7 @@ Fuera de alcance en la UI: registro, login social, iOS, operar en Binance, multi
 
 ## Color
 
-Color mode: DARK (default). Primary color: #7C3AED.
+Color mode: DARK (default). Primary color: #A78BFA. Neutral (background): #0B1020. Roundness: 12px.
 
 ### Dark mode palette (default)
 
@@ -98,6 +98,20 @@ Contraste verificado (WCAG AA): todo texto ≥ 4,5:1 y outline-control ≥ 3:1 s
 - **GoalProgress**: barra de avance en USD y el equivalente en Bs a ambas tasas.
 - **Navegación**: barra inferior con Inicio, Ingresos, Compras, Gastos, Metas. FAB "Agregar gasto" en Inicio y Gastos. Las subpantallas y hojas no muestran la barra.
 - **Estados**: vacío (mensaje corto y una acción), cargando (skeleton, no spinner) y sin conexión (StaleRateBanner).
+
+### Patrones aprobados
+
+- **Tarjetas**: sin borde exterior; se separan del fondo solo por tono (surface). Dentro de listas, divisores outline entre filas.
+- **Stepper de cantidad**: pastilla (999px) en surface-high con borde outline (#2A3350), botones − y + de 48×48 dp y la cantidad en el centro. No usar outline-control ni forma rectangular.
+- **Contorno punteado**: reservado para el ingreso *esperado* (IncomeOccurrence). Botones secundarios como "Agregar producto" usan contorno sólido.
+- **RateChip**: compacto (ancho según el contenido), texto completo sin truncar ("hace 2 h"). El enlace "Ver tasas ›" va en la SellUsdtCard, no dentro del chip.
+- **SellUsdtCard**: total en display; fila BCV con chip, "Bs …" y "@ 220,00" a la derecha; fila USDT con chip, "Vender X USDT" en Inter 20px/600 y "Ver tasas ›"; debajo, la base del cálculo. Igual en todas las pantallas.
+- **Chips de moneda**: "BCV" y "USDT" siempre como pill con fondo del color al 15 %, también en tarjetas secundarias.
+- **Quitar de una lista**: deslizar la fila revela "Quitar" (ícono + texto en negative) y luego aparece un snackbar "Producto quitado · Deshacer". Sin botón ×.
+- **Resumen fijo**: barra en surface-high sobre la navegación, sin sombra, con el total y la acción principal ("Ir al súper", "Finalizar compra").
+- **Objetivos táctiles**: todo control interactivo mide al menos 48×48 dp (checkbox con área de 48, botón atrás, botones de confirmar).
+- **Colores de categoría**: Supermercado #818CF8, Servicios #F472B6, Salud #E879F9, Transporte #FB923C; nunca los de BCV, USDT, positive, negative ni warning. Ícono en círculo y chip pill con el color al 15 %.
+- **Porcentajes**: con espacio antes del signo ("56,7 %", "+12 %").
 
 ## Do's and Don'ts
 
