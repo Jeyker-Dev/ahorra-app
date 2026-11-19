@@ -4,7 +4,7 @@
 
 App móvil de finanzas personales (Android, publicada en Play Store) pensada para la realidad venezolana: ingresos en dólares, gastos en dólares o bolívares, venta de USDT en Binance antes de comprar y precios que cambian con frecuencia. Combina un calendario de ingresos recurrentes, gastos por categoría con listas de compras, tasas de cambio y metas de ahorro o inversión.
 
-Frontend en Flutter y backend en FastAPI (Python), compartido con las otras apps personales y desplegado en el VPS junto a FunWork.
+Frontend en Flutter (este repo) y backend propio en FastAPI (Python), el repo `ahorra-api`, generado desde la plantilla `fastapi-starter-kit` y desplegado en el VPS junto a FunWork.
 
 ## Problema
 
