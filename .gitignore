@@ -1,2 +1,16 @@
 # IDE local caches
 .idea/caches/
+
+# IDE local files
+.idea/libraries/
+.idea/runConfigurations/
+*.iml
+
+# Flutter/Dart build output
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.pub-cache/
+.pub/
+build/
+coverage/
