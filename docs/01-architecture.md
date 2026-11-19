@@ -46,4 +46,4 @@ Pendiente. Se define cuando se implementen las primeras pantallas, a partir de l
 
 ## Decisiones
 
-Pendiente de registrar como ADR en `docs/decisions/`.
+Los ADR viven en el módulo de Decisiones de FunWork, proyecto Ahorra. Las decisiones de esta arquitectura (Riverpod, Drift offline-first, estructura por feature) todavía no están registradas ahí.
