@@ -46,4 +46,9 @@ Pendiente. Se define cuando se implementen las primeras pantallas, a partir de l
 
 ## Decisiones
 
-Los ADR viven en el módulo de Decisiones de FunWork, proyecto Ahorra. Las decisiones de esta arquitectura (Riverpod, Drift offline-first, estructura por feature) todavía no están registradas ahí.
+Los ADR viven en el módulo de Decisiones de FunWork, proyecto Ahorra.
+
+- ADR-007: Riverpod para estado e inyección.
+- ADR-008: app offline-first con Drift y cola de sincronización.
+- ADR-009: estructura por feature con capas.
+- ADR-001 y ADR-002: fuentes de las tasas BCV y USDT/Bs (lado API).
