@@ -49,7 +49,7 @@ Ninguno implementado. Módulos previstos:
 
 - Operar en Binance (comprar, vender, transferir): la integración es solo de lectura.
 - Conectar bancos venezolanos: no tienen APIs abiertas; sus saldos se cargan a mano.
-- Lectura de precios por scraping de HTML: solo se usan las APIs JSON que las tiendas ya exponen.
+- Lectura de precios por scraping de HTML: solo se usan las APIs JSON que las tiendas ya exponen. La única excepción es la tasa oficial del BCV, que no tiene API y se lee del HTML de su sitio (ADR-001 en FunWork).
 - Uso multiusuario o compartido, y versión para iOS, en la primera etapa.
 - Asesoría de inversión.
 
