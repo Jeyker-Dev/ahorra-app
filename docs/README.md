@@ -1,4 +1,4 @@
-# Documentación de Ahorra (app)
+# Documentación de Rinde (app)
 
 ## Mapa
 

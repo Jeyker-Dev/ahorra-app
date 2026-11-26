@@ -1,10 +1,14 @@
 # Visión
 
+> *"Haz que tu plata rinda."*
+
 ## Qué es
 
-App móvil de finanzas personales (Android, publicada en Play Store) pensada para la realidad venezolana: ingresos en dólares, gastos en dólares o bolívares, venta de USDT en Binance antes de comprar y precios que cambian con frecuencia. Combina un calendario de ingresos recurrentes, gastos por categoría con listas de compras, tasas de cambio y metas de ahorro o inversión.
+**Rinde** (antes "Ahorra") es una app móvil de finanzas personales (Android, publicada en Play Store) pensada para la realidad venezolana: ingresos en dólares, gastos en dólares o bolívares, venta de USDT en Binance antes de comprar y precios que cambian con frecuencia. Combina un calendario de ingresos recurrentes, gastos por categoría con listas de compras, tasas de cambio y metas de ahorro o inversión.
 
 Frontend en Flutter (este repo) y backend propio en FastAPI (Python), el repo `ahorra-api`, generado desde la plantilla `fastapi-starter-kit` y desplegado en el VPS junto a FunWork.
+
+**Por qué el nombre:** en Venezuela el objetivo no es solo ahorrar, es que la plata rinda: comprar sabiendo cuánto sale, vender los USDT justos y que lo que sobra sirva para algo. Resume los tres corazones de la app (lista de compras con memoria de precio, cuántos USDT vender y metas) y habla de un resultado, no de una función, igual que LifeForge y Landed. El identificador del paquete (`com.jeyker.ahorra_app`) y los nombres de los repos no cambian.
 
 ## Problema
 
@@ -13,6 +17,17 @@ Frontend en Flutter (este repo) y backend propio en FastAPI (Python), el repo `a
 - Los precios de los productos cambian seguido; cargarlos y actualizarlos a mano es tedioso y se abandona.
 - Cada monto tiene tres lecturas que importan: dólares, bolívares a tasa BCV y bolívares a tasa USDT.
 - El dinero está repartido entre cuentas (Binance, bancos, efectivo) y no hay un total consolidado.
+
+### El mercado
+
+| Herramienta | Qué hace bien | Qué le falta para Venezuela |
+|---|---|---|
+| Wallet (BudgetBakers), Spendee, Monefy | Gastos por categoría y gráficos | Una sola moneda o conversión simple; no saben de BCV ni de USDT |
+| YNAB | Presupuesto por sobres | Caro, en inglés y pensado para bancos de EE. UU. |
+| Monitor Dólar, PyDolarVe y similares | Tasas BCV y paralelo al instante | Solo muestran tasas, no administran nada |
+| Bring, Listonic | Listas de compras compartidas | Sin precios, sin historial, sin tasas |
+
+Nadie junta tasas, gastos multimoneda, lista de compras con memoria de precio y cuántos USDT vender.
 
 ## Usuario objetivo
 
