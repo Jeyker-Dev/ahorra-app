@@ -1,10 +1,11 @@
-# Design system — Ahorra
+# Design system — Rinde (Mercado)
 
 ## Producto
 
-App Android (Material 3, Flutter) de finanzas personales para Venezuela, de un solo usuario.
+App Android (Material 3, Flutter) de finanzas personales para Venezuela.
 Ingresos en USD, compras en supermercado, venta de USDT en Binance antes de comprar.
 Pregunta central de la app: "¿cuánto entra, cuánto cuesta lo que voy a comprar y cuántos USDT vendo?"
+Lema: "Haz que tu plata rinda."
 Fuera de alcance en la UI: registro, login social, iOS, operar en Binance, multiusuario.
 
 ## Tono
@@ -13,49 +14,55 @@ Fuera de alcance en la UI: registro, login social, iOS, operar en Binance, multi
 - Utilitario y tranquilo, sin lenguaje de lujo ni "premium".
 - Verbos concretos: "Confirmar precio", "Marcar como recibido", "Vender 42,10 USDT".
 
+## Concepto visual
+
+Mercado: la app se usa sobre todo en el súper, de día, con la lista en la mano. Papel crema como un ticket, verde billete para la plata que rinde y amarillo de etiqueta de precio para precios y ofertas. Formas del mundo real: etiquetas de precio para productos y tickets para la lista y su total.
+
 ## Color
 
-Color mode: DARK (default). Primary color: #A78BFA. Neutral (background): #0B1020. Roundness: 12px.
+Color mode: LIGHT (default). Primary color: #1F7A4D. Neutral (background): #FBF8F1. Roundness: 12px.
 
-### Dark mode palette (default)
+### Light mode palette (default)
 
 | Token (equivalente M3) | Hex | Uso |
 |---|---|---|
-| primary (primary) | #A78BFA | CTA, selección, foco |
-| on-primary (on_primary) | #0B1020 | Texto e íconos sobre primary |
-| background (background) | #0B1020 | Fondo |
-| surface (surface_container) | #131A2E | Tarjetas |
-| surface-high (surface_container_high) | #1B2440 | Hojas inferiores, elementos elevados |
-| on-surface (on_surface) | #E6E9F5 | Texto principal |
-| on-surface-muted (on_surface_variant) | #9AA3BD | Etiquetas, montos secundarios |
-| outline (outline_variant) | #2A3350 | Solo divisores decorativos en listas |
-| outline-control (outline) | #64748B | Bordes de inputs, checkboxes y contorno punteado |
-| tag-bcv | #60A5FA | Etiqueta "BCV" |
-| tag-usdt | #2DD4BF | Etiqueta "USDT" |
-| positive | #4ADE80 | Recibido, precio que baja |
-| negative (error) | #F87171 | Precio que sube, error |
-| warning | #FBBF24 | Tasa desactualizada, ingreso esperado vencido |
+| primary (primary) | #1F7A4D | CTA, selección, foco (verde billete) |
+| on-primary (on_primary) | #FFFFFF | Texto e íconos sobre primary |
+| background (background) | #FBF8F1 | Fondo (papel crema) |
+| surface (surface_container) | #FFFFFF | Tarjetas, tickets |
+| surface-high (surface_container_high) | #F3EEE3 | Hojas inferiores, elementos elevados, resumen fijo |
+| on-surface (on_surface) | #1C1B17 | Texto principal |
+| on-surface-muted (on_surface_variant) | #5E5A50 | Etiquetas, montos secundarios |
+| outline (outline_variant) | #E6DFD0 | Solo divisores decorativos en listas |
+| outline-control (outline) | #857F70 | Bordes de inputs, checkboxes y contorno punteado |
+| price-tag | #F5C518 | Fondo de etiquetas de precio y ofertas (texto encima en on-surface, nunca como texto) |
+| tag-bcv | #1F5FBF | Etiqueta "BCV" |
+| tag-usdt | #0E6E73 | Etiqueta "USDT" |
+| positive | #276B2C | Recibido, precio que baja |
+| negative (error) | #B3261E | Precio que sube, error |
+| warning | #8A5300 | Tasa desactualizada, ingreso esperado vencido |
 
-### Light mode palette (reference)
+### Dark mode palette (reference)
 
 | Token (equivalente M3) | Hex |
 |---|---|
-| primary (primary) | #7C3AED |
-| on-primary (on_primary) | #FFFFFF |
-| background (background) | #F7F7FA |
-| surface (surface_container) | #FFFFFF |
-| surface-high (surface_container_high) | #EEF0F5 |
-| on-surface (on_surface) | #151826 |
-| on-surface-muted (on_surface_variant) | #5B6275 |
-| outline (outline_variant) | #D9DCE5 |
-| outline-control (outline) | #6B7280 |
-| tag-bcv | #2563EB |
-| tag-usdt | #0F766E |
-| positive | #166534 |
-| negative (error) | #B91C1C |
-| warning | #92400E |
+| primary (primary) | #5CC98E |
+| on-primary (on_primary) | #12140F |
+| background (background) | #12140F |
+| surface (surface_container) | #1B1E17 |
+| surface-high (surface_container_high) | #252920 |
+| on-surface (on_surface) | #F1EEE4 |
+| on-surface-muted (on_surface_variant) | #ADA898 |
+| outline (outline_variant) | #333828 |
+| outline-control (outline) | #7E7A6C |
+| price-tag | #F5C518 |
+| tag-bcv | #7FB0FF |
+| tag-usdt | #4FD1C5 |
+| positive | #7BC47F |
+| negative (error) | #F28B82 |
+| warning | #F2C94C |
 
-Contraste verificado (WCAG AA): todo texto ≥ 4,5:1 y outline-control ≥ 3:1 sobre background, surface y surface-high, en ambos modos.
+Contraste verificado (WCAG AA): todo texto ≥ 4,5:1 y outline-control ≥ 3:1 sobre background, surface y surface-high, en ambos modos. on-primary sobre primary: 5,3:1 (light) y 9,0:1 (dark); on-surface sobre price-tag: 10,6:1.
 
 - El USD no tiene color: es la unidad base y va en on-surface.
 - El color nunca es la única señal: siempre acompañado de etiqueta o ícono.
@@ -63,11 +70,11 @@ Contraste verificado (WCAG AA): todo texto ≥ 4,5:1 y outline-control ≥ 3:1 s
 ## Tipografía
 
 - Headline: Manrope. Body: Inter. Label: Inter.
-- Montos: Inter con cifras tabulares (tnum).
+- Montos: DM Mono, como en un ticket (cifras de ancho fijo).
 
 | Rol | Fuente | Tamaño | Line-height | Peso |
 |---|---|---|---|---|
-| display (monto principal) | Inter | 32px | 40px | 700 |
+| display (monto principal) | DM Mono | 32px | 40px | 500 |
 | headline | Manrope | 24px | 32px | 700 |
 | title | Manrope | 20px | 28px | 600 |
 | body | Inter | 16px | 24px | 400 |
@@ -79,7 +86,7 @@ Contraste verificado (WCAG AA): todo texto ≥ 4,5:1 y outline-control ≥ 3:1 s
 
 ## Forma y espacio
 
-- Radio: 12px en tarjetas, botones e inputs; 16px en las esquinas superiores de las hojas inferiores; 999px (pill) en chips.
+- Radio: 12px en tarjetas, botones e inputs; los tickets (lista y SellUsdtCard) llevan borde inferior dentado o perforado; 16px en las esquinas superiores de las hojas inferiores; 999px (pill) en chips.
 - Espaciado con base de 4px: 4, 8, 12, 16, 24.
 - Elevación por tono de superficie (surface → surface-high), no por sombras.
 - Ancho de referencia 360–412 dp, con la barra de navegación de Android.
@@ -96,21 +103,22 @@ Contraste verificado (WCAG AA): todo texto ≥ 4,5:1 y outline-control ≥ 3:1 s
 - **SellUsdtCard**: total de la lista en MoneyTriple, "Vender X USDT" destacado, la tasa usada y la base del cálculo ("pagando en Bs a tasa BCV + 1 % de margen").
 - **ExpenseRow**: categoría (ícono + chip), monto en la moneda original y la tasa guardada en ese momento.
 - **GoalProgress**: barra de avance en USD y el equivalente en Bs a ambas tasas.
+- **PriceTag**: etiqueta de precio con fondo price-tag, esquina recortada y monto en DM Mono; marca el último precio de un producto y las ofertas.
 - **Navegación**: barra inferior con Inicio, Ingresos, Compras, Gastos, Metas. FAB "Agregar gasto" en Inicio y Gastos. Las subpantallas y hojas no muestran la barra.
 - **Estados**: vacío (mensaje corto y una acción), cargando (skeleton, no spinner) y sin conexión (StaleRateBanner).
 
 ### Patrones aprobados
 
 - **Tarjetas**: sin borde exterior; se separan del fondo solo por tono (surface). Dentro de listas, divisores outline entre filas.
-- **Stepper de cantidad**: pastilla (999px) en surface-high con borde outline (#2A3350), botones − y + de 48×48 dp y la cantidad en el centro. No usar outline-control ni forma rectangular.
+- **Stepper de cantidad**: pastilla (999px) en surface-high con borde outline, botones − y + de 48×48 dp y la cantidad en el centro. No usar outline-control ni forma rectangular.
 - **Contorno punteado**: reservado para el ingreso *esperado* (IncomeOccurrence). Botones secundarios como "Agregar producto" usan contorno sólido.
 - **RateChip**: compacto (ancho según el contenido), texto completo sin truncar ("hace 2 h"). El enlace "Ver tasas ›" va en la SellUsdtCard, no dentro del chip.
-- **SellUsdtCard**: total en display; fila BCV con chip, "Bs …" y "@ 220,00" a la derecha; fila USDT con chip, "Vender X USDT" en Inter 20px/600 y "Ver tasas ›"; debajo, la base del cálculo. Igual en todas las pantallas.
+- **SellUsdtCard**: total en display; fila BCV con chip, "Bs …" y "@ 220,00" a la derecha; fila USDT con chip, "Vender X USDT" en DM Mono 20px/500 y "Ver tasas ›"; debajo, la base del cálculo. Igual en todas las pantallas.
 - **Chips de moneda**: "BCV" y "USDT" siempre como pill con fondo del color al 15 %, también en tarjetas secundarias.
 - **Quitar de una lista**: deslizar la fila revela "Quitar" (ícono + texto en negative) y luego aparece un snackbar "Producto quitado · Deshacer". Sin botón ×.
 - **Resumen fijo**: barra en surface-high sobre la navegación, sin sombra, con el total y la acción principal ("Ir al súper", "Finalizar compra").
 - **Objetivos táctiles**: todo control interactivo mide al menos 48×48 dp (checkbox con área de 48, botón atrás, botones de confirmar).
-- **Colores de categoría**: Supermercado #818CF8, Servicios #F472B6, Salud #E879F9, Transporte #FB923C; nunca los de BCV, USDT, positive, negative ni warning. Ícono en círculo y chip pill con el color al 15 %.
+- **Colores de categoría**: Supermercado #4F46E5, Servicios #BE185D, Salud #A21CAF, Transporte #C2410C (light; en dark usar las variantes claras #818CF8, #F472B6, #E879F9, #FB923C); nunca los de BCV, USDT, positive, negative ni warning. Ícono en círculo y chip pill con el color al 15 %.
 - **Porcentajes**: con espacio antes del signo ("56,7 %", "+12 %").
 
 ## Do's and Don'ts
@@ -124,4 +132,5 @@ Don't:
 - Glassmorphism, desenfoque de fondo, gradientes neón o brillos.
 - Notch, home indicator o patrones de iOS.
 - Texto blanco sobre primary en modo oscuro (usar on-primary).
+- Texto en price-tag: el amarillo es solo fondo, nunca color de texto.
 - Login social, registro o selección de cuentas.

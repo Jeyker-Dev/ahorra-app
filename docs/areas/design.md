@@ -4,6 +4,8 @@
 
 Vive en [stitch-design.md](stitch-design.md): es el archivo que se sube a Stitch como DESIGN.md, así que contiene solo el design system.
 
+Dirección (2026-11-26): **Mercado**, que reemplaza al violeta oscuro anterior. Modo claro por defecto porque la app se usa en el súper, de día; papel crema, verde billete, amarillo de etiqueta de precio, tickets y etiquetas de precio, y montos en DM Mono. Se eligió porque cuenta el nombre Rinde ("Haz que tu plata rinda") y se diferencia de LifeForge y Landed, que son oscuras.
+
 ## Pantallas en Stitch
 
 Proyecto "Ahorra Login - Loading State" (id `1676522024862888488`). Revisado el 2026-11-16. Solo contiene las pantallas aprobadas y un DESIGN.md; los login viejos, la imagen de referencia y las versiones intermedias se borraron.
@@ -46,3 +48,5 @@ El único design system válido es "Ahorra" (`assets/11155543976960747498`, el q
   - [x] Desbloqueo (huella o PIN)
 - Verificar que los supermercados cobran en Bs a tasa BCV; de eso depende el cálculo `USDT a vender = USD × BCV ÷ tasa USDT/Bs` (+ margen por spread).
 - Cargar este design system en Stitch (requiere aprobación).
+- Regenerar en Stitch las pantallas aprobadas con el design system Mercado: subir el nuevo `stitch-design.md` como DESIGN.md y aplicarlo con `apply_design_system`. Los flujos, componentes y patrones aprobados se mantienen; cambia la piel.
+- Cambiar en Flutter el tema (colores, modo claro por defecto, DM Mono para montos) y el nombre visible de la app a Rinde.
