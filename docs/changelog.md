@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-11-27
+
+- **Diseño en Stitch (Mercado)**: se aplicó el design system **Mercado** (`assets/e5fae29435844a85ad9ce80bd4f5844b`, modo claro con papel crema, verde billete, `PriceTag` amarillo, borde de ticket dentado en compras y `SellUsdtCard`, montos en DM Mono y colores claros de categoría) a las 14 pantallas aprobadas en Stitch, guardando sus capturas actualizadas en `docs/areas/screens/`.
+
 ## 2026-11-25
 
 - **Acceso y sesión**: se agregó la pantalla de login de sesión única (`/login`), almacenamiento seguro de tokens (`flutter_secure_storage`), cliente HTTP `Dio` con refresco rotativo single-flight ante `401`, redirección reactiva según estado de autenticación y cierre de sesión desde el menú de Inicio.

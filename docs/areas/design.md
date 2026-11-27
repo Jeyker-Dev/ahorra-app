@@ -6,28 +6,30 @@ Vive en [stitch-design.md](stitch-design.md): es el archivo que se sube a Stitch
 
 Dirección (2026-11-26): **Mercado**, que reemplaza al violeta oscuro anterior. Modo claro por defecto porque la app se usa en el súper, de día; papel crema, verde billete, amarillo de etiqueta de precio, tickets y etiquetas de precio, y montos en DM Mono. Se eligió porque cuenta el nombre Rinde ("Haz que tu plata rinda") y se diferencia de LifeForge y Landed, que son oscuras.
 
+El único design system válido en Stitch es **Rinde** (`assets/e5fae29435844a85ad9ce80bd4f5844b`, modo claro / Mercado). Se descartan el design system violeta anterior (`assets/11155543976960747498`), "Ahorra Neon Noir" (`assets/c8e5c08a5732461bbef307bcd2449085`) y el "Ahorra" duplicado (`assets/5d66f76d148845c9b010440895a89dc6`).
+
 ## Pantallas en Stitch
 
-Proyecto "Ahorra Login - Loading State" (id `1676522024862888488`). Revisado el 2026-11-16. Solo contiene las pantallas aprobadas y un DESIGN.md; los login viejos, la imagen de referencia y las versiones intermedias se borraron.
+Proyecto "Ahorra-App" (id `1676522024862888488`). Actualizado el 2026-11-27 con el design system Mercado y los ajustes de ticket, `PriceTag`, DM Mono y variantes claras de categoría.
 
-| Pantalla | Qué muestra | Módulo |
-|---|---|---|
-| Compras – Lista sugerida (Actualizada) (`a35201809b434990a7cb60795a115a9a`) | Lista sugerida, `RateChip`, steppers 48 dp (`surface-high`), swipe para quitar, `SellUsdtCard` (`$ 50,00` / `37,03 USDT`), barra fija con "Ir al súper" | Recomendación de compras |
-| Compras – En el súper (Steppers en cápsula) (`306a3817414a4254bca6ee4ef720d787`) | Checklist de compra, confirmación inline 48 dp, steppers en pastilla (`surface-high`, 48 dp), `SellUsdtCard` (`$ 50,50` / `37,40 USDT`), barra fija | Lista de compras con memoria de precio |
-| Producto – Historial de precio (`23f0b03dbea449e58f32a18ef790384e`) | Último precio (`$ 1,40`), `PriceSparkline` de 6 compras, historial con tasa BCV guardada y variación porcentual | Lista de compras con memoria de precio |
-| Ingresos – Calendario (Mobile) (`82a668b0c53346a1ae6fabc8f5d16997`) | Resumen del mes en MoneyTriple (`$ 1.500,00`), calendario con hoy y esperados punteados, regla de repetición, ocurrencias recibida y esperadas con "Confirmar" / "Corregir monto" | Ingresos |
-| Ingresos – Regla de repetición (`c0f07640c49f4d19a100715ad748441a`) | Nombre y monto en USD con equivalencias BCV/USDT y tasa usada, selector de días 1–31 (48 dp), switch "último día del mes", próximas ocurrencias y barra fija "Cancelar" / "Guardar regla" | Ingresos |
-| Gastos – Actualizada (`129e41d11ca94b2cad35fb3fc7123bc9`) | Total del mes en MoneyTriple (`$ 115,50`), desglose por categoría con barra apilada, chips de filtro, gastos agrupados por día con monto original y tasa guardada, FAB "Agregar gasto" | Gastos por categoría |
-| Agregar gasto (`71c5ee7711d3413ba829f42be9f99da3`) | Selector Bs/USD, monto con conversión en vivo y tasa BCV que se guarda, grilla de categorías, descripción, fecha y barra fija "Guardar gasto" | Gastos por categoría |
-| Metas (`f928e0e6b8dc4493b5fd35f020684415`) | Ahorrado en metas en MoneyTriple (`$ 1.690,00`, 51,2 % de `$ 3.300,00`), tarjetas GoalProgress con avance, faltante y equivalentes BCV/USDT, "Agregar aporte" y "+ Nueva meta" | Metas de ahorro o inversión |
-| Metas – Vacío (`46620e230ce548acbdb4ff2a82d59ba6`) | Estado vacío de Metas: ícono, "Todavía no tienes metas" y botón "Crear meta". Usa los tokens derivados de Stitch en vez de los hex exactos; en Flutter mandan los colores de stitch-design.md | Metas de ahorro o inversión |
-| Tasas – Historial (Mobile App) (`378d50d48b2e4baeba3e9ec2cb337295`) | Tasas BCV y USDT/Bs con variación a 30 días, brecha, selector de rango, RateHistoryChart y últimas actualizaciones. Generada desde la web; en Flutter, llevar el botón atrás, el selector de rango y las filas a 48 dp | Tasas de cambio |
-| Login – Sesión única (`9ccd47b8b6574e069e96df46e87faba4`) | Marca, campos "Usuario" y "Contraseña" con ojo, botón "Ingresar", aviso de huella o PIN; sin registro, recuperación ni Google/Apple. En Flutter: borde de campos #64748B (el diseño usa #2A3350, sin contraste 3:1) y botón del ojo de 48 dp | Acceso |
-| Desbloqueo (`c8e05fadd04a470ead2f35934e086636`) | "Hola, jeyker", indicador de PIN de 4, teclado 3×4 con huella y borrar, salida "Ingresar con usuario y contraseña" | Acceso |
-| Compras – Lista sugerida: Vacío (`0583131095fd48ee8287ffccfc3a84cf`) | Estado sin historial: ícono de carrito, "Todavía no hay compras registradas", texto de ayuda y botón "Registrar compra"; barra inferior con Compras activa | Recomendación de compras |
-| Inicio (`6c0b15483f7b407e866796e045cf28b3`) | Disponible (`$ 420,00`), próximo ingreso esperado (`$ 650,00`), `RateChip`, `StaleRateBanner` sin conexión, accesos a compras/metas, FAB "Agregar gasto" | Resumen |
+| Pantalla | Qué muestra | Captura | Módulo |
+|---|---|---|---|
+| Compras – Lista sugerida (`82540f027a4a4be0bbb8a389ca96c9ec`) | Lista con borde inferior dentado tipo ticket, `RateChip`, `PriceTag` amarillo en último precio unitario, steppers 48 dp (`surface-high`), swipe para quitar, `SellUsdtCard` ticket (`$ 50,00` / `37,03 USDT`), barra fija "Ir al súper" | [compras-lista-sugerida.png](screens/compras-lista-sugerida.png) | Recomendación de compras |
+| Compras – Lista sugerida: Vacío (`caa5abcbc4e84f3b868bb9d04e1d2912`) | Estado sin historial: ícono de carrito, "Todavía no hay compras registradas", texto de ayuda y botón "Registrar compra"; barra inferior con Compras activa. En Flutter llevar etiquetas de la barra inferior de 11px a ≥ 12px | [compras-lista-sugerida-vacio.png](screens/compras-lista-sugerida-vacio.png) | Recomendación de compras |
+| Compras – En el súper (`a00d32d9e132497495e84f3db6763700`) | Checklist tipo ticket con borde inferior dentado, `PriceTag` en precios unitarios, confirmación inline 48 dp, steppers en pastilla (`surface-high`, 48 dp), `SellUsdtCard` ticket (`$ 50,50` / `37,40 USDT`), barra fija "Finalizar compra" | [compras-en-el-super.png](screens/compras-en-el-super.png) | Lista de compras con memoria de precio |
+| Producto – Historial de precio (`918b631fd511495daba83219135981d4`) | Último precio confirmado (`$ 1,40`) en `PriceTag` amarillo con esquina recortada y DM Mono, `PriceSparkline` de 6 compras, historial con tasa BCV guardada y variación porcentual | [producto-historial.png](screens/producto-historial.png) | Lista de compras con memoria de precio |
+| Inicio (`8c997bc9b2ee40dd9b88c59dc67e7c53`) | Disponible (`$ 420,00`), próximo ingreso esperado (`$ 650,00`) con contorno punteado y chips BCV/USDT al 15 %, `RateChip`, `StaleRateBanner` sin conexión, accesos a compras/metas, FAB "Agregar gasto" | [inicio.png](screens/inicio.png) | Resumen |
+| Ingresos – Calendario (`3ef9f1039a34458391245e242217553f`) | Resumen del mes en MoneyTriple (`$ 1.500,00`) con DM Mono, calendario con hoy y esperados punteados, regla de repetición, ocurrencias recibida y esperadas punteadas con "Confirmar" / "Corregir monto" | [ingresos-calendario.png](screens/ingresos-calendario.png) | Ingresos |
+| Ingresos – Regla de repetición (`9004d6196d5242e0a7f757a2aba9a6b4`) | Nombre y monto en USD con equivalencias BCV/USDT y tasa usada, selector de días 1–31 (48 dp, seleccionados en `#1F7A4D`), switch "último día del mes", próximas ocurrencias y barra fija `surface-high` "Cancelar" / "Guardar regla" | [ingresos-regla.png](screens/ingresos-regla.png) | Ingresos |
+| Gastos (`35759c452a4743caabd53e1e38b87afa`) | Total del mes en MoneyTriple (`$ 115,50`), desglose por categoría con barra apilada y colores de categoría light (`#4F46E5`, `#BE185D`, `#A21CAF`, `#C2410C`), chips de filtro, gastos por día en DM Mono, FAB "Agregar gasto". En Flutter llevar chips BCV/USDT de 11px a 12px | [gastos.png](screens/gastos.png) | Gastos por categoría |
+| Agregar gasto (`8e80d6d2b9b84c4e997b6f82330ca5c2`) | Selector Bs/USD, monto en DM Mono con conversión en vivo y tasa BCV que se guarda, grilla de categorías en variante clara, descripción, fecha y barra fija `surface-high` "Guardar gasto" | [agregar-gasto.png](screens/agregar-gasto.png) | Gastos por categoría |
+| Metas (`50837e14ddf741de9a172496a9c2ffb4`) | Ahorrado en metas en MoneyTriple (`$ 1.690,00`, 51,2 % de `$ 3.300,00`), tarjetas GoalProgress con chips "Ahorro" / "Inversión" en verde tenue, barra de progreso sobre pista clara, equivalentes BCV/USDT, "Agregar aporte" y "+ Nueva meta" | [metas.png](screens/metas.png) | Metas de ahorro o inversión |
+| Metas – Vacío (`ef9275d6d6454bbeaa2e2d9db300b904`) | Estado vacío de Metas: ícono, "Todavía no tienes metas" y botón "+ Crear meta" | [metas-vacio.png](screens/metas-vacio.png) | Metas de ahorro o inversión |
+| Tasas – Historial (`2a5a5f6a29824e2387b0f159487eb5f7`) | Tasas BCV y USDT/Bs en DM Mono con variación a 30 días, brecha (`36,4 %`), selector de rango (`7 días`, `30 días`, `90 días`), `RateHistoryChart` (`#1F5FBF` / `#0E6E73`) y últimas actualizaciones con divisores | [tasas-historial.png](screens/tasas-historial.png) | Tasas de cambio |
+| Login – Sesión única (`f4e604774dcc4d2f9ec90010ac6821ab`) | Marca Rinde, campos "Usuario" y "Contraseña" con contorno `#857F70` y ojo 48 dp, botón "Ingresar" en `#1F7A4D`, aviso de huella o PIN; sin registro, recuperación ni login social | [login.png](screens/login.png) | Acceso |
+| Desbloqueo (`44826adf1d144ec596a108cfd4145555`) | "Hola, jeyker", indicador de PIN de 4, teclado 3×4 con huella y borrar, salida "Ingresar con usuario y contraseña" | [desbloqueo.png](screens/desbloqueo.png) | Acceso |
 
-El único design system válido es "Ahorra" (`assets/11155543976960747498`, el que incluye "Patrones aprobados"). "Ahorra Neon Noir" y el "Ahorra" duplicado (`assets/5d66f76d148845c9b010440895a89dc6`) se descartan.
+Stitch deriva sus propios tokens de Material 3: en Flutter mandan los hex, tamaños mínimos (≥ 12px) y objetivos táctiles (≥ 48 dp) de [stitch-design.md](stitch-design.md).
 
 ## Pendientes
 
@@ -47,6 +49,6 @@ El único design system válido es "Ahorra" (`assets/11155543976960747498`, el q
   - [x] Login – Sesión única (reemplaza al login actual: sin registro, Apple ni Google)
   - [x] Desbloqueo (huella o PIN)
 - Verificar que los supermercados cobran en Bs a tasa BCV; de eso depende el cálculo `USDT a vender = USD × BCV ÷ tasa USDT/Bs` (+ margen por spread).
-- Cargar este design system en Stitch (requiere aprobación).
-- Regenerar en Stitch las pantallas aprobadas con el design system Mercado: subir el nuevo `stitch-design.md` como DESIGN.md y aplicarlo con `apply_design_system`. Los flujos, componentes y patrones aprobados se mantienen; cambia la piel.
-- Cambiar en Flutter el tema (colores, modo claro por defecto, DM Mono para montos) y el nombre visible de la app a Rinde.
+- [x] Cargar este design system en Stitch.
+- [x] Regenerar en Stitch las pantallas aprobadas con el design system Mercado y capturar sus vistas actualizadas en [screens/](screens/).
+- Cambiar en Flutter el tema (colores, modo claro por defecto, DM Mono para montos), aplicar `PriceTag` / tickets y actualizar el nombre visible de la app a Rinde.
